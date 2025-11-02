@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(layout="wide") 
 st.header("World Wide Tsunami and Earthquake")
 
-filename = r'G:/ML-Python/tsunami/earthquake_data_tsunami.csv'
+filename = 'earthquake_data_tsunami.csv'
 df = pd.read_csv(filename)
 
 fig1 = px.scatter_geo(df,
@@ -58,4 +58,5 @@ with col4:
     st.plotly_chart(fig4, use_container_width=True, key='chart4')
 
 # Last chart full width
+
 st.plotly_chart(fig5, use_container_width=True, key='chart5')
